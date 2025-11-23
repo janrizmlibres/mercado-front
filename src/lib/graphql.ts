@@ -17,6 +17,8 @@ export const graphQLClient = new GraphQLClient(GRAPHQL_URL, {
     };
 
     if (token) {
+      // Send both a standard Authorization header and the existing custom Authentication header
+      headers['Authorization'] = `Bearer ${token}`;
       headers['Authentication'] = token;
     }
 
