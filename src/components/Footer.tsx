@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-100 pt-16 pb-8 border-t font-sans">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="font-black text-lg mb-4 uppercase">Mercado</h3>
             <p className="text-sm text-gray-600 mb-4">
