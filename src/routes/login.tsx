@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import { Loader2 } from 'lucide-react'
 
+const AUTH_URL = import.meta.env.VITE_AUTH_URL ?? 'http://localhost:3001'
+
 // Since the login endpoint is REST, we'll fetch it directly
 export const Route = createFileRoute('/login')({
   component: LoginPage,
@@ -22,7 +24,7 @@ function LoginPage() {
     setError('')
 
     try {
-      const response = await fetch('http://localhost:3001/auth/login', {
+      const response = await fetch(`${AUTH_URL}/auth/login`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
